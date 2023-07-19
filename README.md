@@ -25,4 +25,6 @@ docker-compose up -d
 
 4. That's it! You can now access Aptabase at `http://localhost:8000` 🎉
 
+**Note:** By default, Aptabase is not configured to send email via SMTP . You can either see the emails in the logs or add the relevant SMTP variables in the `docker-compose.yml` file. A list of all Environment Variables is available [here](https://github.com/aptabase/aptabase/blob/main/src/Application/EnvSettings.cs).
+
 > If that's not working, please check the logs with `docker-compose logs -f` and make sure there are no errors.
