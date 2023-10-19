@@ -12,7 +12,7 @@ services:
 
   aptabase_events_db:
     container_name: aptabase_events_db
-    image: clickhouse/clickhouse-server:23.3.8.21-alpine
+    image: clickhouse/clickhouse-server:23.8.4.69-alpine
     restart: always
     volumes:
       - events-db-data:/var/lib/clickhouse
