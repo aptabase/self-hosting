@@ -28,3 +28,7 @@ docker-compose up -d
 **Note:** By default, Aptabase is not configured to send email via SMTP . You can either see the emails in the logs or add the relevant SMTP variables in the `docker-compose.yml` file. A list of all Environment Variables is available [here](https://github.com/aptabase/aptabase/blob/main/src/Features/EnvSettings.cs).
 
 > If that's not working, please check the logs with `docker-compose logs -f` and make sure there are no errors.
+
+## First Login / Account
+
+There is no default login. Once you are able to access your self-hosted instance, you need to create/register a new accont. After registering, the activation link that is required to activate it will be in the container logs. Once you follow that link, your new account will be active, and you will be able to access Aptabase in its entirity.
