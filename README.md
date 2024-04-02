@@ -31,4 +31,4 @@ docker-compose up -d
 
 ## First Login / Account
 
-There is no default login. Once you are able to access your self-hosted instance, you need to create/register a new accont. After registering, the activation link that is required to activate it will be in the container logs. Once you follow that link, your new account will be active, and you will be able to access Aptabase in its entirity.
+There is no default login. Once you are able to access your self-hosted instance, you need to create/register a new account. After registering, the activation link that is required to activate it will be in the container logs. Once you follow that link, your new account will be active, and you will be able to access Aptabase in its entirity.
