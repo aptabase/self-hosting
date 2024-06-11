@@ -1,4 +1,3 @@
-version: "3.2"
 services:
   aptabase_db:
     container_name: aptabase_db
