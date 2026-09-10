@@ -36,3 +36,5 @@ There is no default login. Once you are able to access your self-hosted instance
 ## One-Click Deployment
 
 [![Deploy on RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?app_id=297)
+
+You can also deploy Aptabase with one click using the [official Easypanel template](https://easypanel.io/templates/aptabase), which provisions the required PostgreSQL and ClickHouse services automatically.
