@@ -32,6 +32,8 @@ services:
       - aptabase_db
     ports:
       - 8000:8080
+    volumes:
+      - app-keys:/root/.aspnet/DataProtection-Keys
     environment:
       BASE_URL: http://localhost:8000 # replace with your ip or domain, including port if needed
       AUTH_SECRET: c4rI4x8kz5DgKJ1is5Eiu9bNncSQ6ROD # get a strong secret from https://randomkeygen.com/
@@ -42,4 +44,6 @@ volumes:
   db-data:
     driver: local
   events-db-data:
+    driver: local
+  app-keys:
     driver: local
