@@ -11,7 +11,7 @@ services:
 
   aptabase_events_db:
     container_name: aptabase_events_db
-    image: clickhouse/clickhouse-server:23.8.4.69-alpine
+    image: clickhouse/clickhouse-server:26.8.36.3-alpine # 26.8.36.3 fixes CVE-2026-116366; do not downgrade to 23.x
     restart: always
     volumes:
       - events-db-data:/var/lib/clickhouse
@@ -34,7 +34,9 @@ services:
       - 8000:8080
     environment:
       BASE_URL: http://localhost:8000 # replace with your ip or domain, including port if needed
-      AUTH_SECRET: c4rI4x8kz5DgKJ1is5Eiu9bNncSQ6ROD # get a strong secret from https://randomkeygen.com/
+      # Required. Generate your own with: openssl rand -base64 32
+      # Never reuse a value you found in a tutorial: anyone who knows it can sign in as any user.
+      AUTH_SECRET: ${AUTH_SECRET:?Set AUTH_SECRET in a .env file next to this compose file. Generate one with: openssl rand -base64 32}
       DATABASE_URL: Server=aptabase_db;Port=5432;User Id=aptabase;Password=sTr0NGp4ssw0rd;Database=aptabase
       CLICKHOUSE_URL: Host=aptabase_events_db;Port=8123;Username=aptabase;Password=sTr0NGp4ssw0rd
 
